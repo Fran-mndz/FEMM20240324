@@ -74,10 +74,10 @@
                 @Html.DisplayFor(modelItem => item.Notes)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Brand.Id)
+                @Html.DisplayFor(modelItem => item.Brand.BrandName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Warehouse.Id)
+                @Html.DisplayFor(modelItem => item.Warehouse.WarehouseName)
             </td>
             <td>
                     <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Editar</a> |
