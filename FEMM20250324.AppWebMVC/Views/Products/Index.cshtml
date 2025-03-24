@@ -13,25 +13,35 @@
     <thead>
         <tr>
             <th>
+                <!--
                 @Html.DisplayNameFor(model => model.ProductName)
+                -->
+                
+                Nombre Producto
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Description)
+                <!--@Html.DisplayNameFor(model => model.Description)-->
+                Descripción
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Price)
+                <!--@Html.DisplayNameFor(model => model.Price)-->
+                Precio
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.PurchasePrice)
+                <!--@Html.DisplayNameFor(model => model.PurchasePrice)-->
+                Precio Compra
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Notes)
+                <!--@Html.DisplayNameFor(model => model.Notes)-->
+                Notas
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Brand)
+                <!--@Html.DisplayNameFor(model => model.Brand)-->
+                Marca
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Warehouse)
+                <!--@Html.DisplayNameFor(model => model.Warehouse)-->
+                Bodega
             </th>
             <th></th>
         </tr>
@@ -69,3 +79,12 @@
 }
     </tbody>
 </table>
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+             $('#myTable').DataTable({
+               "language":languageTable
+             });
+        });
+    </script>
+}

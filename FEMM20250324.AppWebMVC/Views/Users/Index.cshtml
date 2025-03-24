@@ -9,13 +9,17 @@
 <p>
     <a asp-action="Create">Crear nuevo usuario</a>
 </p>
-<table class="table">
+<table class="table" id="myTable">
     <thead>
         <tr>
             <th>
+                <!--
                 @Html.DisplayNameFor(model => model.Username)
+                -->
+                Usuario
             </th>
             <th>
+
                 @Html.DisplayNameFor(model => model.Email)
             </th>
             <!--
@@ -24,10 +28,16 @@
             </th>    
             -->
             <th>
+                <!--
                 @Html.DisplayNameFor(model => model.Role)
+                -->
+                Rol
             </th>
             <th>
+                <!--
                 @Html.DisplayNameFor(model => model.Notes)
+                -->
+                Notas
             </th>
             <th></th>
         </tr>
@@ -36,6 +46,7 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+
                 @Html.DisplayFor(modelItem => item.Username)
             </td>
             <td>
@@ -61,3 +72,13 @@
 }
     </tbody>
 </table>
+@section Scripts {
+     <script>
+         $(document).ready(function() {
+ 
+              $('#myTable').DataTable({
+                "language":languageTable
+              });
+         });
+     </script>
+ }
