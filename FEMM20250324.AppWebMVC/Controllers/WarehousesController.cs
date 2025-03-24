@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FEMM20250324.AppWebMVC.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FEMM20250324.AppWebMVC.Controllers
 {
+    [Authorize(Roles = "ADMINISTRADOR")]
     public class WarehousesController : Controller
     {
         private readonly Test20250324DbContext _context;
@@ -17,7 +19,7 @@ namespace FEMM20250324.AppWebMVC.Controllers
         {
             _context = context;
         }
-
+       
         // GET: Warehouses
         public async Task<IActionResult> Index()
         {
