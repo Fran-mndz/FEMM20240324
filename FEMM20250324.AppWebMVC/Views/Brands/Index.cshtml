@@ -1,22 +1,29 @@
 ﻿@model IEnumerable<FEMM20250324.AppWebMVC.Models.Brand>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Agregar Marca";
 }
 
-<h1>Index</h1>
+<h1>Marcas</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Agregar marca</a>
 </p>
-<table class="table">
+<table class="table" id="myTable">
     <thead>
         <tr>
             <th>
+                <!--
+
                 @Html.DisplayNameFor(model => model.BrandName)
+                -->
+                Marca
             </th>
             <th>
+                <!--
                 @Html.DisplayNameFor(model => model.Country)
+                -->
+                Pais
             </th>
             <th></th>
         </tr>
@@ -31,9 +38,9 @@
                 @Html.DisplayFor(modelItem => item.Country)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
             </td>
         </tr>
 }
