@@ -44,3 +44,7 @@ CREATE TABLE Users (
     Notes TEXT                               -- Notas adicionales (Notas adicionales)
 );
 GO
+
+--GERENTE: davisito12345@gmail.com password: 12345
+
+--ADMINISTRADOR kikito123@gmail.com password: 12345
