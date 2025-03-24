@@ -41,9 +41,11 @@
                                                    
                         @if (User.Identity.IsAuthenticated)
                         {
+                            if(User.IsInRole("ADMINISTRADOR")){
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Index">Usuarios</a>
                             </li>
+                            }
                         }
                     </ul>
                     @if (User.Identity.IsAuthenticated)

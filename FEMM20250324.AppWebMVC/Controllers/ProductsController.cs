@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace FEMM20250324.AppWebMVC.Controllers
 {
-    [Authorize(Roles = "ADMINISTRADOR")]
+    [Authorize(Roles = "ADMINISTRADOR, GERENTE")]
     public class ProductsController : Controller
     {
         private readonly Test20250324DbContext _context;
