@@ -28,7 +28,8 @@
                         <!--
                             Nuevas pestañas aqui con el authorize
                         -->
-
+                        @if (User.Identity.IsAuthenticated)
+                        {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Brands" asp-action="Index">Marcas</a>
                             </li>
@@ -38,9 +39,6 @@
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Products" asp-action="Index">Productos</a>
                             </li>
-                                                   
-                        @if (User.Identity.IsAuthenticated)
-                        {
                             if(User.IsInRole("ADMINISTRADOR")){
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Index">Usuarios</a>
